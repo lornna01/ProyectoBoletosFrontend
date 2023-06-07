@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+    <ul class="navbar-nav">
+        <td><button [routerLink]="'/Sistema/empleados/registrar-empleado/'"
+            class="btn btn-outline-warning" >NUEVO</button></td>
+        
+
+    </ul>
+</nav>
+<h2>LISTA DE EMPLEDOS</h2>
+
+<table class="table table-warning">
+    <thead class="table-dark">
+        <tr class="text-center">
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Fecha de Nacimiento</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Nacionalidad</th>
+            <th scope="col">CARGO</th>
+            <th scope="col">EDITAR</th>
+            <th scope="col">ELIMINAR</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let empleado of empleados">
+            <th>{{empleado.id}}</th>
+            <td>{{empleado.nombre}}</td>
+            <td>{{empleado.fecha_nacimiento}}</td>
+            <td>{{empleado.telefono}}</td>
+            <td>{{empleado.direccion}}</td>
+            <td>{{empleado.genero}}</td>
+            <td>{{empleado.nacionalidad}}</td>
+            <td>{{empleado.cargo}}</td>
+            <td> <button [routerLink]="'/actualizar-empleado/' + empleado.id"
+                    class="btn btn-warning">Editar</button></td>
+            <td><button (click)="eliminarEmpleado(empleado.id)" class="btn btn-danger"
+                    style="margin-left : 10px">Eliminar</button></td>
+
+
+        </tr>
+    </tbody>
+</table>

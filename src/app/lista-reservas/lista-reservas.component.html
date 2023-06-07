@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+    <ul class="navbar-nav">
+        
+    </ul>
+</nav>
+<h2>LISTA DE RESERVAS</h2>
+
+<table class="table table-warning">
+    <thead class="table-dark">
+        <tr class="text-center">
+            <th scope="col">ID</th>
+            <th scope="col">CLASE VUELO</th>
+            <th scope="col">ASIENTO</th>
+            <th scope="col">NUMERO VUELO</th>
+            <th scope="col">PASAJERO</th>
+            <th scope="col">ELIMINAR</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let reserva of reservas">
+            <th>{{reserva.id}}</th>
+            <th>{{reserva.clase_vuelo}}</th>
+            <th>{{reserva.asiento}}</th>
+            <th>{{reserva.id_vuelo?.id}}</th>
+            <th>{{reserva.id_pasajero?.id}}</th>
+            <td><button (click)="eliminarReserva(reserva.id)" class="btn btn-danger"
+                    style="margin-left : 10px">Eliminar</button></td>
+
+                    
+        </tr>
+    </tbody>
+</table>

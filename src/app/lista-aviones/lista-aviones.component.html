@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+    <ul class="navbar-nav">
+        <td><button [routerLink]="'/Sistema/aviones/registrar-avion/'"
+            class="btn btn-outline-warning" >NUEVO</button></td>
+        
+
+    </ul>
+</nav>
+<h2>LISTA DE AVIONES</h2>
+
+<table class="table table-warning">
+    <thead class="table-dark">
+        <tr class="text-center">
+            <th scope="col">ID</th>
+            <th scope="col">Capacidad</th>
+            <th scope="col">Nombre Avion</th>
+            <th scope="col">Nombre Modelo</th>
+            <th scope="col">EDITAR</th>
+            <th scope="col">ELIMINAR</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let avion of aviones">
+            <th>{{avion.id}}</th>
+            <td>{{avion.capacidad}}</td>
+            <td>{{avion.nombre_avion}}</td>
+            <td>{{avion.nombre_modelo}}</td>            
+            <td> <button [routerLink]="'/actualizar-avion/' + avion.id"
+                    class="btn btn-warning">Editar</button></td>
+            <td><button (click)="eliminarAvion(avion.id)" class="btn btn-danger"
+                    style="margin-left : 10px">Eliminar</button></td>
+
+
+        </tr>
+    </tbody>
+</table>

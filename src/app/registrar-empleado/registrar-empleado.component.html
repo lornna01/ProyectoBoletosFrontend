@@ -1,0 +1,49 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de empleado</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="container">
+            <div class="form-group">
+                <label>Nombre:</label>
+                <input type="text" class="form-control" id="nombre" [(ngModel)]="empleado.nombre" name="nombre">
+            </div>
+
+            <div class="form-group">
+                <label>Fecha Nacimiento:</label>
+                <input type="date" class="form-control" id="fecha_nacimiento" [(ngModel)]="empleado.fecha_nacimiento"
+                    name="fecha_nacimiento">
+            </div>
+
+            <div class="form-group">
+                <label>Telefono:</label>
+                <input type="text" class="form-control" id="telefono" [(ngModel)]="empleado.telefono" name="telefono">
+            </div>
+
+            <div class="form-group">
+                <label>Direccion:</label>
+                <input type="text" class="form-control" id="direccion" [(ngModel)]="empleado.direccion"
+                    name="direccion">
+            </div>
+
+            <div class="form-group">
+                <label>Genero:</label>
+                <input type="text" class="form-control" id="genero" [(ngModel)]="empleado.genero" name="genero">
+            </div>
+
+            <div class="form-group">
+                <label>Nacionalidad:</label>
+                <input type="text" class="form-control" id="nacionalidad" [(ngModel)]="empleado.nacionalidad"
+                    name="nacionalidad">
+            </div>
+
+            <div class="form-group">
+                <label>Cargo:</label>
+                <input type="text" class="form-control" id="cargo" [(ngModel)]="empleado.cargo" name="cargo">
+            </div>
+
+
+        </div>
+        <button class="btn btn-success ">GUARDAR</button>
+
+    </form>
+
+</div>

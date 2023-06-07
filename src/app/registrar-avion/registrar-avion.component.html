@@ -1,0 +1,28 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de AVIONES</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="container">
+            <div class="form-group">
+                <label>Capacidad:</label>
+                <input type="number" class="form-control" id="capacidad" [(ngModel)]="avion.capacidad" name="capacidad">
+            </div>
+
+            <div class="form-group">
+                <label>Nombre del Avion:</label>
+                <input type="text" class="form-control" id="nombre_avion" [(ngModel)]="avion.nombre_avion"
+                    name="nombre_avion">
+            </div>
+
+            <div class="form-group">
+                <label>Nombre del Modelo:</label>
+                <input type="text" class="form-control" id="nombre_modelo" [(ngModel)]="avion.nombre_modelo" name="nombre_modelo">
+            </div>
+
+            
+
+        </div>
+        <button class="btn btn-success ">GUARDAR</button>
+
+    </form>
+
+</div>

@@ -1,0 +1,52 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">ACTUALIZAR</h3>
+    <form (ngSubmit)="actualizarPasajeros()" #pasajeroForm="ngForm">
+        <div class="container">
+            <div class="form-group">
+                <label>ID:</label>
+                <input type="number" class="form-control" id="id_empleado" [(ngModel)]="pasajero.id"
+                    name="id_empleado">
+            </div>
+
+            <div class="form-group">
+                <label>NOMBRE:</label>
+                <input type="text" class="form-control" id="nombre" [(ngModel)]="pasajero.nombre" name="nombre">
+            </div>
+
+            <div class="form-group">
+                <label>Fecha Nacimiento:</label>
+                <input type="date" class="form-control" id="fecha_nacimiento" [(ngModel)]="pasajero.fecha_nacimiento"
+                    name="fecha_nacimiento">
+            </div>
+
+            <div class="form-group">
+                <label>Telefono:</label>
+                <input type="number" class="form-control" id="telefono" [(ngModel)]="pasajero.telefono" name="telefono">
+            </div>
+
+            <div class="form-group">
+                <label>Direccion:</label>
+                <input type="text" class="form-control" id="direccion" [(ngModel)]="pasajero.direccion"
+                    name="direccion">
+            </div>
+
+            <div class="form-group">
+                <label>Genero:</label>
+                <input type="text" class="form-control" id="genero" [(ngModel)]="pasajero.genero" name="genero">
+            </div>
+
+            <div class="form-group">
+                <label>Nacionalidad:</label>
+                <input type="text" class="form-control" id="nacionalidad" [(ngModel)]="pasajero.nacionalidad"
+                    name="nacionalidad">
+            </div>
+
+            
+
+
+        </div>
+        <button class="btn btn-outline-success" [disabled]="!pasajeroForm.form.valid">Guardar</button>
+
+    </form>
+
+</div>

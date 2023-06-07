@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+    <ul class="navbar-nav">
+        
+    </ul>
+</nav>
+<h2>LISTA DE VUELOS</h2>
+
+<table class="table table-warning">
+    <thead class="table-dark">
+        <tr class="text-center">
+            <th scope="col">ID</th>
+            <th scope="col">ORIGEN</th>
+            <th scope="col">FECHA SALIDA</th>
+            <th scope="col">HORA SALIDA</th>
+            <th scope="col">DESTINO</th>
+            <th scope="col">FECHA LLEGADA</th>
+            <th scope="col">HORA LLEGADA</th>
+            <th scope="col">HORA REVISION</th>
+            <th scope="col">NUMERO PUERTA</th>
+            <th scope="col">AVION</th>
+            <th scope="col">ELIMINAR</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vuelo of vuelos">
+            <th>{{vuelo.id}}</th>
+            <th>{{vuelo.origen}}</th>
+            <th>{{vuelo.fecha_salida}}</th>
+            <th>{{vuelo.hora_salida}}</th>
+            <th>{{vuelo.destino}}</th>
+            <th>{{vuelo.fecha_llegada}}</th>
+            <th>{{vuelo.hora_llegada}}</th>
+            <th>{{vuelo.hora_revision}}</th>
+            <th>{{vuelo.numero_puerta}}</th>
+            <th>{{vuelo.fk_Id_Avion?.id}}</th>
+            <td><button (click)="eliminarVuelo(vuelo.id)" class="btn btn-danger"
+                    style="margin-left : 10px">Eliminar</button></td>
+        </tr>
+    </tbody>
+</table>

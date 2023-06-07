@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+    
+</nav>
+<h2>LISTA DE RESERVAS</h2>
+
+<table class="table table-warning">
+    <thead class="table-dark">
+        <tr class="text-center">
+            <th scope="col">ID</th>
+            <th scope="col">FECHA EMISION</th>
+            <th scope="col">FECHA VALIDACION</th>
+            <th scope="col">PRECIO BOLETO</th>
+            <th scope="col">HORA PRECHEQUEO</th>
+            <th scope="col">NUMERO RESERVA</th>
+            <th scope="col">ELIMINAR</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let boleto of boletos">
+            <th>{{boleto.id}}</th>
+            <th>{{boleto.fecha_emision}}</th>
+            <th>{{boleto.fecha_validacion}}</th>
+            <th>{{boleto.precio_boleto}}</th>
+            <th>{{boleto.hora_prechequeo}}</th>
+            <th>{{boleto.id_reserva?.id}}</th>
+            <td><button (click)="eliminarBoleto(boleto.id)" class="btn btn-danger"
+                    style="margin-left : 10px">Eliminar</button></td>
+        </tr>
+    </tbody>
+</table>
